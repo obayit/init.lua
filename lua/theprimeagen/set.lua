@@ -17,7 +17,7 @@ vim.opt.wrap = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
@@ -30,4 +30,9 @@ vim.opt.updatetime = 50
 
 -- almost all my code files do not give a damn about the 80 limit :(
 -- vim.opt.colorcolumn = "80"
+
+vim.opt.termbidi = true  -- suport arabic (bi-directional terminal, if it didn't work install mlterm
+vim.opt.errorbells = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
