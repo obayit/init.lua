@@ -50,6 +50,12 @@ return require('packer').startup(function(use)
 
   use("folke/zen-mode.nvim")
   use("airblade/vim-gitgutter")
+  use("preservim/nerdtree")
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use("ryanoasis/vim-devicons")
 
 end)
 
