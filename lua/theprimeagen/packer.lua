@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use "smartpde/telescope-recent-files"
 
   use({
 	  'rose-pine/neovim',
@@ -56,6 +57,13 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use("ryanoasis/vim-devicons")
+
+  use { 'fgheng/winbar.nvim' }
+
+  use "glepnir/lspsaga.nvim"
+  use "RRethy/vim-illuminate"
+
+  use "Pocco81/auto-save.nvim"
 
 end)
 

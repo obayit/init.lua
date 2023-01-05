@@ -75,3 +75,6 @@ vim.diagnostic.config({
     virtual_text = true,
 })
 
+-- # my code is not friendly with all static analysers (because mostly it is dynamic python modules :))
+vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+

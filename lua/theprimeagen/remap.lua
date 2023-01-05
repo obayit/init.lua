@@ -21,6 +21,8 @@ end)
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
+-- why not make the greatest remap ever the default?
+vim.keymap.set("x", "p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -49,4 +51,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("i", "jj",  "<ESC>")
 -- unhighlight last search results
 vim.keymap.set("n", "<leader>h", ":noh<CR>")
+
+-- toggle auto save
+vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
 
