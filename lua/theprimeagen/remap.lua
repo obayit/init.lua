@@ -52,6 +52,3 @@ vim.keymap.set("i", "jj",  "<ESC>")
 -- unhighlight last search results
 vim.keymap.set("n", "<leader>h", ":noh<CR>")
 
--- toggle auto save
-vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
-

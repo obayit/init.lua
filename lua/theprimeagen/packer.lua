@@ -63,7 +63,5 @@ return require('packer').startup(function(use)
   use "glepnir/lspsaga.nvim"
   use "RRethy/vim-illuminate"
 
-  use "Pocco81/auto-save.nvim"
-
 end)
 
