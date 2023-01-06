@@ -36,5 +36,5 @@ vim.opt.errorbells = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.clipboard="unnamed"
+vim.opt.clipboard="unnamedplus"
 
