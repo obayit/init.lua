@@ -62,6 +62,7 @@ return require('packer').startup(function(use)
 
   use "glepnir/lspsaga.nvim"
   use "RRethy/vim-illuminate"
+  use "tpope/vim-commentary"
 
 end)
 
