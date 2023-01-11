@@ -1,0 +1,490 @@
+{
+   "odoo position after":{
+      "scope":"xml",
+      "prefix":"pa",
+      "body":[
+         "position=\"after\""
+      ],
+      "description":"position=\"after\""
+   },
+   "odoo position before":{
+      "scope":"xml",
+      "prefix":"pb",
+      "body":[
+         "position=\"before\""
+      ],
+      "description":"position=\"before\""
+   },
+   "odoo position inside":{
+      "scope":"xml",
+      "prefix":"pi",
+      "body":[
+         "position=\"inside\""
+      ],
+      "description":"position=\"inside\""
+   },
+   "odoo position attributes":{
+      "scope":"xml",
+      "prefix":"pt",
+      "body":[
+         "position=\"attributes\""
+      ],
+      "description":"position=\"attributes\""
+   },
+   "odoo attribute":{
+      "scope":"xml",
+      "prefix":"attr-tag",
+      "body":[
+         "<attribute name=\"$1\">$2</attribute>"
+      ],
+      "description":"position=\"attributes\""
+   },
+   "odoo chatter fields 14":{
+      "scope":"xml",
+      "prefix":"chatter14",
+      "body":[
+         "<div class=\"oe_chatter\">",
+         "    <field name=\"message_follower_ids\"/>",
+         "    $0<field name=\"activity_ids\"/>",
+         "    <field name=\"message_ids\"/>",
+         "</div>"
+      ],
+      "description":"chatter fields"
+   },
+   "odoo chatter fields 11":{
+      "scope":"xml",
+      "prefix":"chatter11",
+      "body":[
+         "<div class=\"oe_chatter\">",
+         "<field name=\"message_follower_ids\" widget=\"mail_followers\"/>",
+         "<field name=\"activity_ids\" widget=\"mail_activity\"/>",
+         "<field name=\"message_ids\" widget=\"mail_thread\"/>",
+         "</div>"
+      ],
+      "description":"chatter fields"
+   },
+   "odoo field":{
+      "scope":"xml",
+      "prefix":"ff",
+      "body":[
+         "<field name=\"$1\"$0/>"
+      ],
+      "description":"field tag"
+   },
+   "odoo m2m field":{
+      "scope":"xml",
+      "prefix":"fm",
+      "body":[
+         "<field name=\"$1\" widget=\"many2many_tags\"/>"
+      ],
+      "description":"field m2m tag"
+   },
+   "odoo attrs":{
+      "scope":"xml",
+      "prefix":"attr-attribute",
+      "body":[
+         "attrs=\"{'$4invisible': [('$1', '=$2', $3)]}\""
+      ],
+      "description":"field attrs"
+   },
+   "odoo button":{
+      "scope":"xml",
+      "prefix":"but",
+      "body":[
+         "<button name=\"$1\" type=\"object\" string=\"$2\"/>"
+      ],
+      "description":"object button"
+   },
+   "odoo web_icon":{
+      "scope":"xml",
+      "prefix":"fi",
+      "body":[
+         "web_icon=\"$0${TM_DIRECTORY},static/description/icon.png\""
+      ],
+      "description":"field attrs"
+   },
+   "odoo smart_button_box":{
+      "scope":"xml",
+      "prefix":"smart-button-box",
+      "body":[
+         "<div class=\"oe_button_box\" name=\"button_box\">",
+         "  $0",
+         "</div>"
+      ],
+      "description":"smart buttons box"
+   },
+   "odoo smart_button":{
+      "scope":"xml",
+      "prefix":"smart-button",
+      "body":[
+         "<button name=\"action_$1\" type=\"object\" class=\"oe_stat_button\" icon=\"fa-$0\"",
+         "context=\"{'default_$2_id': id}\">",
+         "  <field string=\"$3\" name=\"$4\" widget=\"statinfo\"/>",
+         "</button>"
+      ],
+      "description":"smart button"
+   },
+   "odoo groups":{
+      "scope":"xml",
+      "prefix":"groups",
+      "body":[
+         "<group>",
+         "    <group>",
+         "        <field name=\"$1\"/>",
+         "    </group>",
+         "</group>"
+      ],
+      "description":"groups for form"
+   },
+   "odoo primary view":{
+      "scope":"xml",
+      "prefix":"primary_view",
+      "body":[
+         "<record id=\"${1}_${2}\" model=\"ir.ui.view\">",
+         "    <field name=\"name\">${3}.${4}</field>",
+         "    <field name=\"model\">${3}</field>",
+         "    <field name=\"priority\" eval=\"100\"/>",
+         "    <field name=\"mode\">primary</field>",
+         "    <field name=\"inherit_id\" eval=\"ref('$1')\"/>",
+         "    <field name=\"arch\" type=\"xml\">",
+         "        ${0}",
+         "    </field>",
+         "</record>"
+      ],
+      "description":"primary view"
+   },
+   "company_id":{
+      "scope":"python",
+      "prefix":"company_id",
+      "body":[
+         "company_id = fields.Many2one('res.company', default=lambda self: self.env.user.company_id)"
+      ],
+      "description":"Change user in unit tests"
+   },
+   "print_var":{
+      "scope":"python",
+      "prefix":"print_var",
+      "body":[
+         "print('### ${1} is {}'.format(${1}))"
+      ],
+      "description":"print var value"
+   },
+   "unit_test_env_user":{
+      "scope":"python",
+      "prefix":"change.user",
+      "body":[
+         "    def setUpClass(cls):",
+         "        super(TestSenderUser, cls).setUpClass()",
+         "        cls.env = cls.env(user=cls.${0})",
+         "        cls.cr = cls.env.cr"
+      ],
+      "description":"Change user in unit tests"
+   },
+   "print_override_functoin":{
+      "scope":"python",
+      "prefix":"super",
+      "body":[
+         "def $1(self):",
+         "    res = super($2, self).$1()",
+         "    $0",
+         "    return res"
+      ],
+      "description":"override function"
+   },
+   "print_hashes":{
+      "scope":"python",
+      "prefix":"###",
+      "body":[
+         "print('### $0')"
+      ],
+      "description":"hashes print"
+   },
+   "print_simple":{
+      "scope":"python",
+      "prefix":"we are in the beam",
+      "body":[
+         "print('############################ we are in the beam #####################')"
+      ],
+      "description":"we are in the beam"
+   },
+   "print_custom":{
+      "scope":"python",
+      "prefix":"hashes",
+      "body":[
+         "print('############################ $1 #####################')"
+      ],
+      "description":"hashes"
+   },
+   "odoo_model":{
+      "scope":"python",
+      "prefix":"om",
+      "body":[
+         "from odoo import api, fields, models, _",
+         "",
+         "",
+         "class $1(models.Model):",
+         "    _name = \"${1/[_]/./g}\"",
+         "    _description = \"${1/([^_]*)(_?)/${1:/capitalize}${2:+ }/g}\"",
+         "    _order = \"sequence, id desc\"",
+         "",
+         "    sequence = fields.Integer('Sequence')",
+         "    name = fields.Char(required=True)",
+         ""
+      ],
+      "description":"model orderd with sequence"
+   },
+   "odoo_settings":{
+      "scope":"python",
+      "prefix":"settings",
+      "body":[
+         "from odoo import api, fields, models, _",
+         "",
+         "",
+         "class ResCompany(models.Model):",
+         "    _inherit = \"res.company\"",
+         "",
+         "    $1 = fields.$2($0)",
+         "",
+         "",
+         "class ResConfigSettings(models.TransientModel):",
+         "    _inherit = 'res.config.settings'",
+         "",
+         "    $1 = fields.$2(related='company_id.$1', readonly=False)"
+      ],
+      "description":"model settings and company combo"
+   },
+   "odoo_action_smart_button":{
+      "scope":"python",
+      "prefix":"action",
+      "body":[
+         "def action_$1(self):",
+         "    self.ensure_one()",
+         "    action = self.env['ir.actions.act_window'].for_xml_id('$2', '$3')",
+         "    action['domain'] = [('$4_id', '=', self.id)]",
+         "    action['context'] = dict(self.env.context)",
+         "    action['context']['default_$4_id'] = self.id",
+         "    return action"
+      ],
+      "description":"action for smart button o2m"
+   },
+   "odoo_field":{
+      "scope":"python",
+      "prefix":"field",
+      "body":[
+         "$1 = fields.$2"
+      ],
+      "description":"field"
+   },
+   "python_base64":{
+      "scope":"python",
+      "prefix":"base64",
+      "body":[
+         "import base64",
+         "base64.b64encode(bytes('your string', 'utf-8'))"
+      ],
+      "description":"string to base64 encoding"
+   },
+   "odoo_employee_id":{
+      "scope":"python",
+      "prefix":"employee",
+      "body":[
+         "$0employee_id = fields.Many2one('hr.employee')"
+      ],
+      "description":"employee_id field"
+   },
+   "odoo_computed_field":{
+      "scope":"python",
+      "prefix":"compute",
+      "body":[
+         "$1 = fields.$2($0compute='_compute_$1')",
+         "",
+         "def _compute_$1(self):",
+         "    for r in self:",
+         "        r.$1 = $3"
+      ],
+      "description":"computed field"
+   },
+   "odoo_title_field":{
+      "scope":"xml",
+      "prefix":"ot",
+      "body":[
+         "<div class=\"oe_title\">",
+         "    <span>Name</span>",
+         "    <h1><field name=\"$0name\"/></h1>",
+         "</div>"
+      ],
+      "description":"titile field"
+   },
+   "odoo_form":{
+      "scope":"xml",
+      "prefix":"of",
+      "body":[
+         "<record id=\"$1_view_form\" model=\"ir.ui.view\">",
+         "    <field name=\"name\">$2.form.view</field>",
+         "    <field name=\"model\">$2</field>",
+         "    <field name=\"arch\" type=\"xml\">",
+         "        <form>",
+         "            <sheet>",
+         "",
+         "                <div class=\"oe_title\">",
+         "                    <span>Name</span>",
+         "                    <h1><field name=\"name\"/></h1>",
+         "                </div>",
+         "                $0<group>",
+         "                    <group>",
+         "                        <field name=\"sequence\" groups=\"base.group_no_one\"/>",
+         "                    </group>",
+         "                </group>",
+         "            </sheet>",
+         "        </form>",
+         "    </field>",
+         "</record>"
+      ],
+      "description":"form view with name as h1 oe_title"
+   },
+   "odoo image_view":{
+      "scope":"xml",
+      "prefix":"oi",
+      "body":[
+         "<field name=\"image_1920\" widget=\"image\" class=\"oe_avatar\" options=\"{'preview_image': 'image_128'}\"/>"
+      ],
+      "description":"image field item form"
+   },
+   "odoo inline_fields_view":{
+      "scope":"xml",
+      "prefix":"finline",
+      "body":[
+         "<label for=\"$1\"/>",
+         "<div>",
+         "    <field name=\"$1\" force_save=\"1\" class=\"oe_inline\"/>",
+         "    <field name=\"$2\" force_save=\"1\" class=\"oe_inline ml-2\"/>",
+         "</div>"
+      ],
+      "description":"inline fields"
+   },
+   "odoo views":{
+      "scope":"xml",
+      "prefix":"ov",
+      "body":[
+         "<record id=\"$1_view_search\" model=\"ir.ui.view\">",
+         "    <field name=\"name\">$2.search</field>",
+         "    <field name=\"model\">$2</field>",
+         "    <field name=\"arch\" type=\"xml\">",
+         "    <search>",
+         "        <field name=\"name\" string=\"Name\"/>",
+         "    </search>",
+         "    </field>",
+         "</record>",
+         "",
+         "<record id=\"$1_view_tree\" model=\"ir.ui.view\">",
+         "    <field name=\"name\">$2.tree</field>",
+         "    <field name=\"model\">$2</field>",
+         "    <field name=\"arch\" type=\"xml\">",
+         "    <tree>",
+         "        <field name=\"sequence\" widget=\"handle\"/>",
+         "        <field name=\"name\"/>",
+         "    </tree>",
+         "    </field>",
+         "</record>",
+         "",
+         "<record id=\"$1_view_form\" model=\"ir.ui.view\">",
+         "    <field name=\"name\">$2.form</field>",
+         "    <field name=\"model\">$2</field>",
+         "    <field name=\"arch\" type=\"xml\">",
+         "    <form>",
+         "        <sheet>",
+         "            <div class=\"oe_title\">",
+         "                <label class=\"oe_edit_only\" for=\"name\"/>",
+         "                <h1><field name=\"name\"/></h1>",
+         "            </div>",
+         "            <group>",
+         "                <group>",
+         "                    <field name=\"sequence\" groups=\"base.group_no_one\"/>",
+         "                </group>",
+         "            </group>",
+         "        </sheet>",
+         "    </form>",
+         "    </field>",
+         "</record>",
+         "",
+         "<record id=\"$1_action_view_tree\" model=\"ir.actions.act_window\">",
+         "    <field name=\"name\">$3</field>",
+         "    <field name=\"res_model\">$2</field>",
+         "    <field name=\"view_mode\">tree,form</field>",
+         "    <field name=\"help\" type=\"html\">",
+         "    <p class=\"o_view_nocontent_smiling_face\">",
+         "        No $4 found. Let's create one!",
+         "    </p><p>",
+         "        $0 Helps improving the business workflow.",
+         "    </p>",
+         "    </field>",
+         "</record>",
+         "",
+         "<menuitem name=\"$3\" action=\"$1_action_view_tree\" id=\"$1_menu\" parent=\"$6\" sequence=\"$7\"/>"
+      ],
+      "description":"model search,tree,form views, action, and menuitem"
+   },
+   "odoo access":{
+      "scope":"csv",
+      "prefix":"os",
+      "body":[
+         "access_$1,${1/[_]/./g},model_$1,$2group_$3_$4,${0}1,1,1,1"
+      ],
+      "description":"ir.model.access"
+   },
+   "odoo active_ribbon":{
+      "scope":"xml",
+      "prefix":"ribbon",
+      "body":[
+         "<widget name=\"web_ribbon\" title=\"Archived\" bg_color=\"bg-danger\" attrs=\"{'invisible': [('active', '=', True)]}\"/>"
+      ],
+      "description":"active ribbon"
+   },
+   "odoo security data":{
+      "scope":"xml",
+      "prefix":"os",
+      "body":[
+         "<odoo>",
+         "    <!-- TODO: make this noupdate=\"1\" -->",
+         "    <record model=\"ir.module.category\" id=\"module_category_$1\">",
+         "        <field name=\"name\">$2</field>",
+         "        <field name=\"description\">Helps you manager your $2.</field>",
+         "        <field name=\"sequence\">$3</field>",
+         "    </record>",
+         "",
+         "    <record id=\"group_$4_user\" model=\"res.groups\">",
+         "        <field name=\"name\">User</field>",
+         "        <field name=\"category_id\" ref=\"module_category_$1\"/>",
+         "        <field name=\"implied_ids\" eval=\"[(4, ref('base.group_user'))]\"/>",
+         "        <field name=\"users\" eval=\"[(4, ref('base.user_root')), (4, ref('base.user_admin'))]\"/>",
+         "    </record>",
+         "",
+         "    <record id=\"group_$4_manager\" model=\"res.groups\">",
+         "        <field name=\"name\">Administrator</field>",
+         "        <field name=\"category_id\" ref=\"module_category_$1\"/>",
+         "        <field name=\"implied_ids\" eval=\"[(4, ref('group_$4_user'))]\"/>",
+         "        <field name=\"users\" eval=\"[(4, ref('base.user_root')), (4, ref('base.user_admin'))]\"/>",
+         "    </record>",
+         "",
+         "</odoo>"
+      ],
+      "description":"module category, and user and manager groups"
+   },
+   "form view state field":{
+      "scope":"xml",
+      "prefix":"state",
+      "body":[
+         "<field name=\"state\" widget=\"statusbar\" statusbar_visible=\"draft,$0\"/>"
+      ],
+      "description":"state field widget in form"
+   },
+   "console log var":{
+      "scope":"js",
+      "prefix":"console",
+      "body":[
+         "console.log('# $1 is$0:)",
+         "console.log($1)"
+      ],
+      "description":"state field widget in form"
+   }
+}
