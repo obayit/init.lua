@@ -21,3 +21,7 @@ about though i would just suggest `git log -S`).
 - did not disable backup and swapfile
 - other minor changes
 
+### TODOs
+- spell checking for camelCase(javascript), and snake_case (python), and xml
+- auto close tags from xml files
+

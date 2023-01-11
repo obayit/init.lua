@@ -31,10 +31,13 @@ vim.opt.updatetime = 50
 -- almost all my code files do not give a damn about the 80 limit :(
 -- vim.opt.colorcolumn = "80"
 
-vim.opt.termbidi = true  -- suport arabic (bi-directional terminal, if it didn't work install mlterm
+vim.opt.termbidi = true  -- support Arabic (bi-directional terminal, if it didn't work install mlterm
 vim.opt.errorbells = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.clipboard="unnamedplus"
+
+-- vim.opt.spelllang = "en,cjk"
+-- vim.opt.spell = true  -- i use custom plugin instead "https://github.com/kamykn/spelunker.vim"
 

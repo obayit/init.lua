@@ -70,6 +70,7 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-
+    use 'kamykn/spelunker.vim'
+    use 'tpope/vim-surround'
 
 end)
