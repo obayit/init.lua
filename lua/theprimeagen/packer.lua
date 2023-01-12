@@ -73,4 +73,6 @@ return require('packer').startup(function(use)
     use 'kamykn/spelunker.vim'
     use 'tpope/vim-surround'
 
+    use "vv9k/vim-github-dark"
+
 end)
