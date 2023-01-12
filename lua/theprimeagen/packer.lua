@@ -74,5 +74,6 @@ return require('packer').startup(function(use)
     use 'tpope/vim-surround'
 
     use "vv9k/vim-github-dark"
+    use "kien/ctrlp.vim"
 
 end)
