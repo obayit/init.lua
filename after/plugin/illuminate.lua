@@ -1,4 +1,5 @@
 -- default configuration
+-- NOTE: this won't work because I have lsp zero (i think) also the same issue goes for bracket coloring
 require('illuminate').configure({
     -- providers: provider used to get references in the buffer, ordered by priority
     providers = {

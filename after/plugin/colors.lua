@@ -4,6 +4,8 @@
  })
  vim.cmd('colorscheme rose-pine')
 
--- vim.opt.colorscheme = 'ghdark'
+-- vim.cmd('colorscheme ghdark')
 -- vim.g.gh_color = "soft"
+
+vim.g.rainbow_active = true  -- this won't work because I am using lsp zero ( i think)
 

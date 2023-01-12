@@ -75,5 +75,6 @@ return require('packer').startup(function(use)
 
     use "vv9k/vim-github-dark"
     use "kien/ctrlp.vim"
+    use "frazrepo/vim-rainbow"
 
 end)
