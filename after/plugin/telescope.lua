@@ -8,12 +8,17 @@ telescope.load_extension("recent_files")
 vim.keymap.set("n", "<Leader><Leader>", telescope.extensions.recent_files.pick)
 
 
--- require('telescope').setup {
---     file_ignore_patterns = {
---         -- node modules
---         "./node_modules/*", "node_modules", "^node_modules/*", "node_modules/*",
---         -- i18n transaltion files
---         "*.po", "*.pot"
---     },
--- }
---
+require('telescope').setup {
+    file_ignore_patterns = {
+        -- node modules
+        "./node_modules/*", "node_modules", "^node_modules/*", "node_modules/*",
+        -- i18n transaltion files
+        "*.po", "*.pot"
+    },
+    pickers = {
+        find_files = {
+            -- theme = "dropdown",
+        }
+    },
+
+}
