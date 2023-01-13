@@ -61,6 +61,7 @@ return require('packer').startup(function(use)
     use { 'fgheng/winbar.nvim' }
 
     use "glepnir/lspsaga.nvim"
+
     use "RRethy/vim-illuminate"
     use "tpope/vim-commentary"
 
@@ -76,5 +77,11 @@ return require('packer').startup(function(use)
     use "vv9k/vim-github-dark"
     use "kien/ctrlp.vim"
     use "frazrepo/vim-rainbow"
+
+    -- debugging
+    use 'mfussenegger/nvim-dap'
+    use 'rcarriga/nvim-dap-ui'
+    use 'mfussenegger/nvim-dap-python'
+    use 'theHamsta/nvim-dap-virtual-text'
 
 end)

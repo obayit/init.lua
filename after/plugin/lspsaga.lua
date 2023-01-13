@@ -1,6 +1,6 @@
 local saga = require("lspsaga")
 
-saga.init_lsp_saga({
+saga.setup({
     symbol_in_winbar = {
         in_custom = false,  -- what does this do?
         enable = true,
@@ -13,5 +13,5 @@ saga.init_lsp_saga({
         file_formatter = "",
         click_support = false,
     },
-
 })
+
