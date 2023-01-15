@@ -88,10 +88,11 @@ return require('packer').startup(function(use)
     use 'theHamsta/nvim-dap-virtual-text'
     use {
         "danielfalk/smart-open.nvim",
-        requires = {
-            { "tami5/sqlite.lua" },
-            { 'kyazdani42/nvim-web-devicons', opt = true },
-        }
+        requires = { "tami5/sqlite.lua" }
+        -- requires = {
+        --     { "tami5/sqlite.lua" },
+        --     { 'kyazdani42/nvim-web-devicons', opt = true },
+        -- }
     }
 
 
