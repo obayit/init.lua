@@ -8,10 +8,20 @@
       {
         "language": [
           "python",
-          "xml",
-          "all"
         ],
-        "path": "./odoo.json"
+        "path": "./odoo-python.json"
+      },
+      {
+        "language": [
+          "xml",
+        ],
+        "path": "./odoo-xml.json"
+      },
+      {
+        "language": [
+          "csv",
+        ],
+        "path": "./odoo-csv.json"
       }
     ]
   }

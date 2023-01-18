@@ -1,0 +1,10 @@
+{
+   "odoo access":{
+      "scope":"csv",
+      "prefix":"os",
+      "body":[
+         "access_$1,${1/[_]/./g},model_$1,$2group_$3_$4,${0}1,1,1,1"
+      ],
+      "description":"ir.model.access"
+   }
+}
