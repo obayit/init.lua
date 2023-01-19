@@ -25,3 +25,10 @@ about though i would just suggest `git log -S`).
 - spell checking for camelCase(javascript), and snake_case (python), and xml
 - auto close tags from xml files
 
+### Goals for Odoo development
+- use the existing community made `odoo-stubs` to remove type errors
+- make go to definition and auto complete work for model methods and fields (is this even possible?)
+- add fields to snippets using tree-sitter or the python server (again is this possible?)
+- add debugging (ez thanks to `dap-python``)
+- taking caffeine by accident after months of abstinence does this ☝️
+
