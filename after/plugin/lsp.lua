@@ -78,6 +78,9 @@ lsp.configure('pyright', {
             analysis = {
                 -- NOTE: remove this after configuring the odoo-stubs
                 typeCheckingMode = "off",
+                venvPath = ".virtualenvs",
+                venv = "odoo11-36",
+                stubPath = "odoo-stubs11",
             },
         },
     }

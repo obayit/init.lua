@@ -22,6 +22,7 @@ require('telescope').setup {
     pickers = {
         find_files = {
             -- theme = "dropdown",
+            follow = true,
         }
     },
     extensions = {
