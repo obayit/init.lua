@@ -38,6 +38,7 @@ vim.opt.smartcase = true
 
 vim.opt.clipboard="unnamedplus"
 
--- vim.opt.spelllang = "en,cjk"
--- vim.opt.spell = true  -- i use custom plugin instead "https://github.com/kamykn/spelunker.vim"
+-- vim.opt.spell = false
+vim.opt.spelllang = "en,cjk"
+vim.opt.spell = true  -- gh.com/kamykn/spelunker.vim
 

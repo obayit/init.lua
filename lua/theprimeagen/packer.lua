@@ -74,7 +74,11 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-    use 'kamykn/spelunker.vim'
+    use {
+        'kamykn/spelunker.vim',
+        requires = { "kamykn/popup-menu.nvim" }
+    }
+
     use 'tpope/vim-surround'
 
     use "vv9k/vim-github-dark"
