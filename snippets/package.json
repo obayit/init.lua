@@ -7,19 +7,25 @@
     "snippets": [
       {
         "language": [
-          "python",
+          "python"
         ],
         "path": "./odoo-python.json"
       },
       {
         "language": [
-          "xml",
+          "xml"
         ],
         "path": "./odoo-xml.json"
       },
       {
         "language": [
-          "csv",
+          "javascript"
+        ],
+        "path": "./my-react.json"
+      },
+      {
+        "language": [
+          "csv"
         ],
         "path": "./odoo-csv.json"
       }

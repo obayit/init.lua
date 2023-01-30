@@ -20,3 +20,5 @@ require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/nvim/snippets
 --
 vim.keymap.set("n", "<leader>s", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>")
 
+ls.filetype_extend("javascript", { "javascriptreact" })
+ls.filetype_extend("javascript", { "html" })

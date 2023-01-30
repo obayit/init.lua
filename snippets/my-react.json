@@ -1,0 +1,11 @@
+{
+   "debug border":{
+      "scope":"js",
+      "prefix":"border",
+      "body":[
+        "borderWidth: 1,",
+        "borderColor: 'red$0'"
+      ],
+      "description":"position=\"attributes\""
+   }
+}
