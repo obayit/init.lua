@@ -42,3 +42,5 @@ vim.opt.clipboard="unnamedplus"
 vim.opt.spelllang = "en,cjk"
 vim.opt.spell = true  -- gh.com/kamykn/spelunker.vim
 
+vim.opt.cursorline = true
+
